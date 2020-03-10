@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 
-class Formatting extends Component {
+class DataFormatter extends Component {
     render(){
         return (
             <div>
@@ -12,7 +12,7 @@ class Formatting extends Component {
 }
 
 ReactDOM.render(
-    <Formatting />, document.getElementById('root')
+    <DataFormatter />, document.getElementById('root')
 );
 
 
