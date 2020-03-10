@@ -1,18 +1,39 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 
+const data = {value: 100000, currency: 'USD'};
+
+let locale = 'en'
+
 class DataFormatter extends Component {
+
+    //state = { locale: 'en' }
+
+    componentDidMount(){
+        console.log("The Component is now mounted");
+    }
+
+    componentDidUpdate(){
+        console.log("The component just updated");
+    }
+
     render(){
+        console.log(this.props)
+        const { value, currency } = this.props.data;
         return (
             <div>
                 <h1>Welcome to data formatter</h1>
+                <p>Value: {value}</p>
+                <p>Currency: {currency}</p>
+                <p>Locale: {this.props.locale}</p>
             </div>
         )
     }
 }
 
 ReactDOM.render(
-    <DataFormatter />, document.getElementById('root')
+    <DataFormatter data={data} locale={locale}/>, 
+    document.getElementById('root')
 );
 
 
